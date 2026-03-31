@@ -41,8 +41,18 @@ function displayMeals(meals) {
       <img src="${meal.strMealThumb}">
       <h3>${meal.strMeal}</h3>
       <p>${meal.strCategory}</p>
+      <button onclick="showRecipe('${meal.idMeal}')">View Recipe</button>
     `;
 
     container.appendChild(div);
   });
+}
+
+async function showRecipe(id) {
+  const res = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+  );
+  const data = await res.json();
+
+  alert(data.meals[0].strInstructions);
 }
