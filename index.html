@@ -2,14 +2,20 @@
 <html>
 <head>
   <title>Recipe Finder</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <h1>🍽 Recipe Finder</h1>
 
-<input type="text" id="searchBox" placeholder="Search recipes...">
-<button onclick="searchMeals()">Search</button>
+<div class="search-box">
+  <input type="text" id="searchBox" placeholder="Search recipes...">
+  <button onclick="searchMeals()">Search</button>
+</div>
 
 <p id="loading" style="display:none;">Loading...</p>
 
