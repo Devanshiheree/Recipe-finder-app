@@ -9,10 +9,29 @@
 <body>
 
 <h1>🍽 Recipe Finder</h1>
+<p class="subtitle">Explore delicious vegetarian & sweet recipes 🍰🥗🥤</p>
 
+<!-- Search -->
 <div class="search-box">
   <input type="text" id="searchBox" placeholder="Search recipes...">
   <button onclick="searchMeals()">Search</button>
+</div>
+
+<!-- Control Bar -->
+<div class="control-bar">
+  <div class="control-item">
+    <label>Filter:</label>
+    <select id="filterCategory" onchange="applyFilters()"></select>
+  </div>
+
+  <div class="control-item">
+    <label>Sort:</label>
+    <select id="sortOption" onchange="applyFilters()">
+      <option value="default">None</option>
+      <option value="asc">A-Z</option>
+      <option value="desc">Z-A</option>
+    </select>
+  </div>
 </div>
 
 <p id="loading" style="display:none;">Loading...</p>
